@@ -1,0 +1,35 @@
+[package]
+name = "wasm-presentation"
+version = "0.1.0"
+authors = ["Tommy Joe Lund <tomlun92@gmail.com>"]
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+
+[dependencies]
+wasm-bindgen = "0.2.45"
+
+[dependencies.web-sys]
+version = "0.3.57"
+features = [
+    'console',
+    'Document',
+    'Element',
+    'Event',
+    'HtmlElement',
+    'HtmlFormElement',
+    'HtmlInputElement',
+    'KeyboardEvent',
+    'MouseEvent',
+    'Node',
+    'Window',
+]
+
+
+[target."cfg(debug_assertions)".dependencies]
+console_error_panic_hook = "0.1.5"

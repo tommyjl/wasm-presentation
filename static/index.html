@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Rust + Webpack project!</title>
+    <style>
+      body {
+        max-width: 400px;
+        margin: auto;
+      }
+      #presentation-input {
+        display: flex;
+        flex-direction: column;
+      }
+      #presentation-input > textarea {
+        height: 30em;
+        resize: vertical;
+      }
+      .hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="presentation-input">
+      <h1>Insert presentation</h1>
+      <textarea></textarea>
+      <button>Start presentation</button>
+    </form>
+    <div id="presentation"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
